@@ -6,6 +6,7 @@
   /** primary **/
   --ion-color-primary: #3880ff;
   --ion-color-primary-rgb: 56, 128, 255;
+  --ion-background-color:#ffffff;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
   --ion-color-primary-shade: #3171e0;
@@ -74,4 +75,13 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  --theme-color:#3171e0;
+  --theme-black: #000000;
+  --ion-color-gray:#dad9d7;
+}
+:root[mode=ios],
+:root[mood=md]{
+  --ion-family: "Heebo-Regular"!important;
+  font-family: "Heebo-Reqular", "Times New Romen", serif !important;
 }
