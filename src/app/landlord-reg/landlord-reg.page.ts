@@ -1,8 +1,9 @@
 // tslint:disable-next-line: comment-format
 //step 2
 
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, Input } from '@angular/core';
+import { HttpClient} from '@angular/common/http';
+import {ServiceService} from './../service.service';
 import { NgModule, Pipe} from '@angular/core';
 import {
   ReactiveFormsModule,
@@ -14,64 +15,50 @@ import {
 } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
 @Component({
   selector: 'app-landlord-reg',
   templateUrl: './landlord-reg.page.html',
   styleUrls: ['./landlord-reg.page.scss'],
 })
 export class LandlordRegPage implements OnInit {
-  constructor() {}
 
+  @Input() lordData= {fname:" ", lname:" ",id_no:" ", email:" " ,cell:" ",title:" ",campus_loc:" ",pwd:" " }
+  navCtrl: any;
+
+  
+  constructor( private _serviceService : ServiceService ) {}
     addLords: any = [];
- /*addData() {
-   // tslint:disable-next-line: whitespace
-   this.landLordService.addLandlord()
-   // tslint:disable-next-line: no-trailing-whitespace
-   .subscribe(data=> console.log(data));
-   console.log(this.add());
- }*/
-
-
-
- langs: string[] = ['English', 'French', 'German'];
-  myform: FormGroup;
-  firstName: FormControl;
-  lastName: FormControl;
-  email: FormControl;
-  password: FormControl;
-  language: FormControl;
 
   ngOnInit() {
-    this.createFormControls();
-    this.createForm();
+    this.getlandLords();
+    
   }
-
-  createFormControls() {
-    this.firstName = new FormControl('', Validators.required);
-    this.lastName = new FormControl('', Validators.required);
-    this.email = new FormControl('', [
-      Validators.required,
-      Validators.pattern('[^ @]*@[^ @]*')
-    ]);
-    this.password = new FormControl('', [
-      Validators.required,
-      Validators.minLength(8)
-    ]);
-    this.language = new FormControl('');
-  }
-
-  createForm() {
-    this.myform = new FormGroup({
-      name: new FormGroup({
-        firstName: this.firstName,
-        lastName: this.lastName
-      }),
-      email: this.email,
-      password: this.password,
-      language: this.language
+  getlandLords(){
+    this._serviceService.postLandlord(this.addLords).subscribe((data: any)=>
+    {this.addLords=data;
+    console.log(this.addLords);
     });
+  }
+  
+
+
+  addreg() {
+    this._serviceService.postLandlord(this.lordData).subscribe(
+data =>
+console.log(data));
+
+console.log(this.lordData.fname);
+console.log(this.lordData.lname);
+console.log(this.lordData.id_no);
+console.log(this.lordData.email);
+console.log(this.lordData.cell);
+console.log(this.lordData.title);
+console.log(this.lordData.campus_loc);
+console.log(this.lordData.pwd);
+    
   }
 
 }
 
-    // tslint:disable-next-line: no-trailing-whites
+

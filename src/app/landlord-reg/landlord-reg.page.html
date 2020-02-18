@@ -37,33 +37,33 @@
     <ion-item>
       <!---->
       <ion-label position="floating">Name</ion-label>
-      <ion-input type="text" name = "fname" [ngModel] ='addLords.fname' ></ion-input>
+      <ion-input [(ngModel)] = "lordData.fname" name="fname" type= "text" required ></ion-input>
     </ion-item>
     
     <ion-item>
       <ion-label position="floating">Surname</ion-label>
-      <ion-input type="text" name = "lname" [ngModel] ='addLords.lname'></ion-input>
+      <ion-input [(ngModel)] ="lordData.lname" name="lname"  type= "text" required ></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="floating">Identity number </ion-label>
-      <ion-input type="text" name = "id_no" [ngModel] ='addLords.id_no'></ion-input>
+      <ion-input [(ngModel)]= "lordData.id_no" name="id_no" type= "text" required ></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="floating">Email address</ion-label>
-      <ion-input type="text" placeholder="abir.tounsi@gmail.com " name = "email" [ngModel] ='addLords.email'></ion-input>
+      <ion-input [(ngModel)] = "lordData.email" name="email"  type= "Email" required ></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="floating">Contact number</ion-label>
-      <ion-input type="number" name = "cell" [ngModel] ='addLords.cell'></ion-input>
+      <ion-input [(ngModel)]= "lordData.cell" name="cell"  type= "number" required ></ion-input>
     </ion-item>
     
   
     <ion-item>
       <ion-label>Select title</ion-label>
-      <ion-select placeholder="Select One" name = "title" [ngModel] ='addLords.title'>
+      <ion-select placeholder="Select One" [(ngModel)]= "lordData.title" name="title"  required >
         <ion-select-option value="a">Mr</ion-select-option>
         <ion-select-option value="b">Mrs</ion-select-option>
         <ion-select-option value="c">Miss</ion-select-option>
@@ -75,7 +75,7 @@
 
     <ion-item>
       <ion-label>Select Campus location</ion-label>
-      <ion-select placeholder="Select One" name = "campus_loc" [ngModel] ='addLords.campus_loc'>
+      <ion-select placeholder="Select One" [(ngModel)]= "lordData.campus_loc" name="campus_loc"  required >
         <ion-select-option value="A">ARCADIA CAMPUS</ion-select-option>
         <ion-select-option value="AR">ARTS CAMPUS</ion-select-option>
         <ion-select-option value="E">EMALAHLENI CAMPUS</ion-select-option>
@@ -90,15 +90,16 @@
 
     <ion-item>
       <ion-label position= "floating" stacked>Enter password  :</ion-label>
-      <ion-input  type="password"  placeholder="" clearInput ngModel required name = "pwd" [ngModel] ='addLords.pwd'></ion-input>
+      <ion-input  type="password" name="pwd"  [(ngModel)] ='lordData.pwd'></ion-input>
     </ion-item>
-   
-    <ion-item>
+
+   <!--    <ion-item>
       <ion-label position= "floating" stacked>Re-enter password: </ion-label>
       <ion-input name="password-repeat" type="password"  equals-to="Form.password"  placeholder=""></ion-input>  
     </ion-item>
-    
-    <ion-button expand="block" color="dark">
+    -->
+
+    <ion-button expand="block" color="dark" (click)=" addreg()">
       <ion-icon name="add"></ion-icon>
       Submit Registration
 
