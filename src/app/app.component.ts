@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
     },
     {
       title: 'Login',
-      url: '/folder/Login',
+      url: 'login',
       icon: 'log-in'
     },
     {
