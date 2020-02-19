@@ -149,9 +149,10 @@
       <ion-label position="fixed">First Name:</ion-label>
       
       <ion-input type="text"
+      
              class="form-control"
              formControlName="firstName"
-             required>
+             required  [(ngModel)] = "stuData.firstName">
             </ion-input>
       <div class="form-control-feedback"
            *ngIf="firstName.errors && (firstName.dirty || firstName.touched)" color="warning">
@@ -181,6 +182,7 @@
       <ion-item>
       <ion-label position="fixed">Last Name:</ion-label>
       <ion-input type="text"
+      required  [(ngModel)] = "stuData.lastName"
              class="form-control"
              formControlName="lastName"
              required>
@@ -208,6 +210,7 @@
    <ion-item>
     <ion-label position="fixed">Email:</ion-label>
     <ion-input type="email"
+    required  [(ngModel)] = "stuData.email"
            class="form-control"
            formControlName="email"
            required>
@@ -232,7 +235,9 @@
    }">
    <ion-item>
     <ion-label position="fixed">Password: </ion-label>
-    <ion-input  shape ="round"type="password"
+    <ion-input  
+    required  [(ngModel)] = "stuData.password"
+    type="password"
            class="form-control"
            formControlName="password"
            required>
@@ -275,7 +280,7 @@
   
 
 
-  <ion-button (click)="doSomething()"shape="round" color="dark" position="floating">Register </ion-button>
+  <ion-button (click)=" add()" (click)="doSomething()"shape="round" color="dark" position="floating">Register </ion-button>
   <ion-button shape="round" color="dark"  position="floating">Sign In</ion-button>
   <!--
     <

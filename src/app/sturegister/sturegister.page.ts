@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import {ServiceService} from './../service.service';
 import { AlertController } from '@ionic/angular';  
 import {
   ReactiveFormsModule,
@@ -23,10 +24,10 @@ import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
   styleUrls: ['./sturegister.page.scss'],
 })
 export class SturegisterPage implements OnInit {
-
+  @Input() stuData= {firstName:" ", lastName:" ",email:" ", password:" " }
  // name = new FormControl('');
-  constructor(public alertCtrl: AlertController) { }
-
+  constructor(public alertCtrl: AlertController, private _serviceService : ServiceService ) { }
+  addstu: any = [];
 
   myform: FormGroup;
   firstName: FormControl;
@@ -40,7 +41,51 @@ export class SturegisterPage implements OnInit {
 
     this.createFormControls();
     this.createForm();
+    this.getstu();
   }
+
+
+  getstu(){
+    this._serviceService.postLandlord(this.addstu).subscribe((data: any)=>
+    {this.addstu=data;
+    console.log(this.addstu);
+    });
+  }
+
+
+
+
+
+
+  add() {
+    this._serviceService.poststu(this.stuData).subscribe(
+data =>
+console.log(data));
+
+console.log(this.stuData.firstName);
+console.log(this.stuData.lastName);
+console.log(this.stuData.email);
+console.log(this.stuData.password);
+
+    
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
