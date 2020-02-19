@@ -1,7 +1,6 @@
 
 
 <ion-content login-header ion-padding>
-  
   <div class = "login-header ion-padding">
     <img class = "logo-img" src="assets/icon/tut.png" alt="">
   </div>
@@ -10,7 +9,8 @@
        <h1 medium-heading>TUTEH PROPERTIES</h1>
       </div>
 
-
+      <br>
+    
       <ion-item transparent>
       <ion-label position="floating"></ion-label>
          <ion-input ngModel name = "loginData.email" #email = "ngModel" placeholder = "E-MAIL" type= "text" required></ion-input>
@@ -20,37 +20,22 @@
            <div *ngIf = "email != loginData.password">
             <div *ngIf = "email.errors">email doesn't exist</div>
           </div>
-           
+
          </div>
         </ion-item>
-
+        <p>check your e-mail for reseting your password</p>
+     <br><br>
      
-      <ion-item transparent>
-        <ion-label position="floating"></ion-label>
-        <ion-input ngModel name  = "loginData.password"  #pwd = "ngModel" placeholder = "PASSWORD" type= "password" required></ion-input>
-        <div *ngIf = "!pwd.valid && pwd.touched">
-        <div *ngIf = "pwd.errors.required">password required</div>
-
-        <div *ngIf = "pwd != loginData.password">
-          <div *ngIf = "pwd.errors">wrong password</div>
-        </div>
-        </div>
-      </ion-item>
-
-<div class="log">
-
-    <a  routerLink="/forget"> Forget Password</a>
-  </div>
-    <div linespace></div>
- 
     <ion-button class = "ion-text-center" color="primary" 
-     (click)="login()">Sign In</ion-button>
+     (click)="forgot">submit</ion-button>
     <br>
 <br><br>
+     
 
-<p>New User?  <a  routerLink="/stud-orlord">Create Account</a></p>
-    
+      
   </div> 
 </ion-content>
+
+
 
 
