@@ -8,8 +8,9 @@ import {HttpClient} from '@angular/common/http';
 export class ServiceService {
 
   constructor(private http: HttpClient) { }
-  login_url = 'http://168.172.185.101:4000/st';
+  login_url = 'http://168.172.185.101:7000/st';
   reg_url = 'http://168.172.185.106:7000/addlord';
+  regstu_url = 'http://168.172.185.106:5000/reg';
 
   public getLogin()
   {
@@ -21,6 +22,14 @@ export class ServiceService {
   {
     return this.http.post<any>(this. reg_url, addlord, {});
   }
+
+
+
+  public poststu(reg:any)
+  {
+    return this.http.post<any>(this. regstu_url, reg, {});
+  }
+
 
 
 
