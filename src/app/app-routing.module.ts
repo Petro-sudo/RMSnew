@@ -12,6 +12,12 @@ const routes: Routes = [
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
   },
   {
+
+    path: ' ',
+    loadChildren: () => import('./student-dash/student-dash.module').then( m => m.StudentDashPageModule)
+  }
+
+
     path: 'sturegister',
     loadChildren: () => import('./sturegister/sturegister.module').then( m => m.SturegisterPageModule)
 
@@ -27,9 +33,6 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   }
-
-
-
 
 ];
 
