@@ -11,22 +11,13 @@ ion-content{
     width: 120px;
     text-align: left;
 }
-[heading-column-lr]{
-    display: flex;
-    text-align:center;
-    padding : 15px;
+.h{
+    text-align: center;
 }
-[medium-heading]{
-
-  font-family: "Heebo-Bold" !important;  
-  font-size: 30px !important;
-  color: var(--theme-black);
-  font-style: bold;
-}
-[small-heading]{
-    font-family: "Heebo-Regular" !important;
-    margin-left: auto;padding-right: 15px; font-size: 15px; ;
-    font-style: oblique;
+.ion-input{
+    border: solid;
+    text-align: center;
+    position: "floating";
 }
 [transparent]
 {
@@ -57,22 +48,4 @@ ion-label{
     opacity: .8;
     font-size: 15px;
     display: block;
-}
-.forget-password
-{
-    color:#000;
-    font-size: 15px;
-    display: block;
-    text-align: right;
-    padding: 10px;
-}
-ion-button
-{
-    text-align: center;
-}
-.log{
-text-align: right;
-}
-h1{
-    text-align: center;
 }
