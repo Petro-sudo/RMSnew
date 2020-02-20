@@ -1,5 +1,5 @@
 ion-content h1{
-    padding-left: 50px;
+    padding-left: 35%;
 }
 
  #first{
@@ -10,11 +10,16 @@ ion-icon{
     zoom: 3;
 }
 
+
 ion-title{
     padding-left: 100px;
 }
 
 
-.push, .ion-footer{
-    height: 50px;
+ion-footer{
+    margin-top: 70px;
+}
+a{
+    text-decoration: none;
+    color:black;
 }

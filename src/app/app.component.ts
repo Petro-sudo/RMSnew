@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
     },
     {
       title: 'Student Registration',
-      url: 'sturegister',
+      url: '/sturegister',
       icon: 'clipboard'
     },
     {
@@ -33,8 +33,8 @@ export class AppComponent implements OnInit {
       icon: 'clipboard'
     },
     {
-      title: 'AboutUs',
-      url: '/folder/About',
+      title: 'How To Apply',
+      url: '/how-to',
       icon: 'people'
     }
     ,
