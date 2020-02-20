@@ -2,17 +2,17 @@
 <ion-app   >
   <ion-split-pane   contentId="main-content"   >
     <ion-menu    contentId="main-content" type="overlay"  >
-      <ion-card>
-        <img src="tut.jpg" width="500px" height="150px" style="padding: 0;">
-      </ion-card>
+     <ion-card style="color:black">
+       card card
+       <ion-card>
    
-      <ion-content >
+      <ion-content style="background-color: rgb(233, 206, 140);" >
         <ion-list  id="home-list">
-          <ion-list-header   style="text-shadow: black;height: 29px;">Home</ion-list-header>
+          <ion-list-header   style="text-shadow: rgba(63, 61, 61, 0.007);height: 40px;">Home</ion-list-header>
           <ion-note>www.tutehres.co.za</ion-note>
 
           <ion-menu-toggle   auto-hide="false" *ngFor="let p of appPages; let i = index"  >
-            <ion-item    style="background-color:rgb(3, 14, 15);" (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
+            <ion-item    style="background-color:rgba(255, 0, 0, 0.568)" (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
               <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
               <ion-label>{{ p.title }}</ion-label>
             </ion-item>
@@ -21,22 +21,11 @@
 
 
        
-        <ion-list id="labels-list"  style="background-color:rgb(3, 14, 15);">
-          <ion-list-header  style="background-color:rgb(3, 14, 15);" >  </ion-list-header>
+        <ion-list id="labels-list"  style="background-color:rgba(255, 0, 0, 0.568)">
+          <ion-list-header  style="background-color:black">  </ion-list-header>
 
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
+     
+         
           <br>
           <br>
           <br>
