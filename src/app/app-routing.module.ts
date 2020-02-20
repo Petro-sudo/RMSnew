@@ -24,9 +24,6 @@ const routes: Routes = [
     path: 'sturegister',
     loadChildren: () => import('./sturegister/sturegister.module').then( m => m.SturegisterPageModule)
   },
-
-
-
   {
     path: 'landlord-reg',
     loadChildren: () => import('./landlord-reg/landlord-reg.module').then( m => m.LandlordRegPageModule)
@@ -39,9 +36,18 @@ const routes: Routes = [
   {
     path: 'forget',
     loadChildren: () => import('./forget/forget.module').then( m => m.ForgetPageModule)
-  },  {
+  },
+  {
     path: 'stud-orlord',
     loadChildren: () => import('./stud-orlord/stud-orlord.module').then( m => m.StudORlordPageModule)
+  },
+  {
+    path: 'contact',
+    loadChildren: () => import('./contact/contact.module').then( m => m.ContactPageModule)
+  },
+  {
+    path: 'soshanguve',
+    loadChildren: () => import('./soshanguve/soshanguve.module').then( m => m.SoshanguvePageModule)
   },
 
 
