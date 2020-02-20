@@ -4,37 +4,21 @@
   
   <div class = "login-header ion-padding">
     <img class = "logo-img" src="assets/icon/tut.png" alt="">
-  </div>
-  <div class = "ion-text-center">
+    </div>
+       <div class = "ion-text-center">
       <div heading-column-lr>
        <h1 medium-heading>TUTEH PROPERTIES</h1>
       </div>
 
 
       <ion-item transparent>
-      <ion-label position="floating"></ion-label>
-         <ion-input ngModel name = "loginData.email" #email = "ngModel" placeholder = "E-MAIL" type= "text" required></ion-input>
-         <div *ngIf = "!email.valid && email.touched">
-           <div *ngIf = "email.errors.required">email required</div>
-
-           <div *ngIf = "email != loginData.password">
-            <div *ngIf = "email.errors">email doesn't exist</div>
-          </div>
-           
-         </div>
+        
+        <ion-input autocomplete = "off" name="email" type="text" [(ngModel)]="postData.email" placeholder="EMAIL"></ion-input>    
         </ion-item>
 
      
-      <ion-item transparent>
-        <ion-label position="floating"></ion-label>
-        <ion-input ngModel name  = "loginData.password"  #pwd = "ngModel" placeholder = "PASSWORD" type= "password" required></ion-input>
-        <div *ngIf = "!pwd.valid && pwd.touched">
-        <div *ngIf = "pwd.errors.required">password required</div>
-
-        <div *ngIf = "pwd != loginData.password">
-          <div *ngIf = "pwd.errors">wrong password</div>
-        </div>
-        </div>
+      <ion-item transparent> 
+        <ion-input autocomplete = "off" name="password" type="password" [(ngModel)]="postData.password" placeholder="PASSWORD"></ion-input> 
       </ion-item>
 
 <div class="log">
@@ -44,7 +28,7 @@
     <div linespace></div>
  
     <ion-button class = "ion-text-center" color="primary" 
-     (click)=" check()">Sign In</ion-button>
+     (click)=" loginAction()">Sign In</ion-button>
     <br>
 <br><br>
 
