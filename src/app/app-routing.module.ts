@@ -13,11 +13,11 @@ const routes: Routes = [
   },
   {
 
-    path: ' ',
+    path: 'student-dash',
     loadChildren: () => import('./student-dash/student-dash.module').then( m => m.StudentDashPageModule)
-  }
+  },
 
-
+{
     path: 'sturegister',
     loadChildren: () => import('./sturegister/sturegister.module').then( m => m.SturegisterPageModule)
 
@@ -32,7 +32,21 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'stud-profile',
+    loadChildren: () => import('./stud-profile/stud-profile.module').then( m => m.StudProfilePageModule)
+  },
+  /*{
+    path: 'contact',
+    loadChildren: () => import('./contact/contact.module').then( m => m.ContactPageModule)
+  },*/
+  {
+    path: 'how-to',
+    loadChildren: () => import('./how-to/how-to.module').then( m => m.HowToPageModule)
   }
+
+
 
 ];
 
