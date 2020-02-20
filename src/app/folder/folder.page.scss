@@ -7,6 +7,7 @@ ion-menu-button {
 ion-card{
 
 
+
   background-position: center;
   padding-bottom: 0;
 
@@ -14,12 +15,26 @@ ion-card{
  
 }
 
-  
+background-image: url("tut1.jpg");
+  background-position: cover;
+  background-repeat: no-repeat;
+  width: 2500px;
+  height: 350px;
+ // animation: animate 16s ease-in-out infinite;
+ 
+}
+.we
+{
+  background-color: yellow;
+  opacity: 0.5;
+}
 
- 
- 
+ion-button:hover {
 
- 
+  background-color: black;
+  border-color: red;
+}
+
 
 
 @keyframes animate{
