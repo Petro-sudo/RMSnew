@@ -40,12 +40,11 @@ export class AppComponent implements OnInit {
     ,
     {
       title: 'Contact',
-      url: '/folder/Contact',
+      url: 'contact',
       icon: 'people'
     }
-
   ];
-  public labels = ['', '', '', '', '', ''];
+  
 
   constructor(
     private platform: Platform,

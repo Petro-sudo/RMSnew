@@ -7,6 +7,7 @@ const routes: Routes = [
     redirectTo: 'folder/Home',
     pathMatch: 'full'
   },
+
   {
     path: 'folder/:id',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
@@ -57,7 +58,7 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
-=======
+
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
@@ -67,6 +68,7 @@ const routes: Routes = [
     redirectTo: 'folder/Home',
     pathMatch: 'full'
   },
+
 
   {
     path: 'folder/:id',
@@ -86,7 +88,6 @@ const routes: Routes = [
   },
 
 
-
   {
     path: 'landlord-reg',
     loadChildren: () => import('./landlord-reg/landlord-reg.module').then( m => m.LandlordRegPageModule)
@@ -104,7 +105,19 @@ const routes: Routes = [
     path: 'stud-orlord',
     loadChildren: () => import('./stud-orlord/stud-orlord.module').then( m => m.StudORlordPageModule)
   },
+  {
+    path: 'contact',
+    loadChildren: () => import('./contact/contact.module').then( m => m.ContactPageModule)
+  },
+  {
+    path: 'soshanguve',
+    loadChildren: () => import('./soshanguve/soshanguve.module').then( m => m.SoshanguvePageModule)
+  },
 
+
+ 
+
+];
 
  
 

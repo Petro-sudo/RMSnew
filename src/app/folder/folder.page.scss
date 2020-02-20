@@ -6,6 +6,15 @@ ion-menu-button {
 
 ion-card{
 
+
+
+  background-position: center;
+  padding-bottom: 0;
+
+ // animation: animate 16s ease-in-out infinite;
+ 
+}
+
 background-image: url("tut1.jpg");
   background-position: cover;
   background-repeat: no-repeat;
@@ -26,12 +35,6 @@ ion-button:hover {
   border-color: red;
 }
 
-  
-
- 
- 
-
- 
 
 
 @keyframes animate{
@@ -162,3 +165,8 @@ margin-top: 100px;
    margin-top: 0;
    margin-bottom: 0;
  }
+ .ion-activatable{
+  position: relative;
+  overflow: hidden;
+  
+}
