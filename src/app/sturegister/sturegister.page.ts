@@ -134,9 +134,10 @@ console.log(this.stuData.password);
 
   async doSomething() {  
     const alert = await this.alertCtrl.create({  
-      header: 'Alert',  
-      subHeader: 'SubTitle',  
-      message: 'This is an alert message',  
+      header: 'Student Registration',  
+     
+      message: 'you have successfully registered',  
+      
       buttons: ['OK']  
     });  
 

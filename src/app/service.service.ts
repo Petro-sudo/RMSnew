@@ -8,8 +8,8 @@ import {HttpClient} from '@angular/common/http';
 export class ServiceService {
 
   constructor(private http: HttpClient) { }
-  login_url = 'http://168.172.185.101:7000/st';
-  reg_url = 'http://168.172.185.106:7000/addlord';
+  login_url = 'http://168.172.185.101:7000/login';
+  reg_url = 'http://168.172.185.106:5000/lord';
   regstu_url = 'http://168.172.185.106:5000/reg';
 
   public getLogin()

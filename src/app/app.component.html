@@ -2,19 +2,26 @@
 <ion-app   >
   <ion-split-pane   contentId="main-content"   >
     <ion-menu    contentId="main-content" type="overlay"  >
-      <ion-card>
-        <img src="/assets/pics/tut.jpg" width="500px" height="150px" style="padding: 0;">
+      <ion-card  style="background-color: black;">
+        <img src="/assets/pics/tut.jpg" width="200px" height="150px" style="padding: 0;">
       </ion-card>
    
       <ion-content >
-        <ion-list  id="home-list">
-          <ion-list-header   style="text-shadow: black;height: 29px;">Home</ion-list-header>
+
+       
+
+
+
+
+
+        <ion-list  style="background-color:black;"   id="home-list">
+          <ion-list-header   style="background-color: red;">Home</ion-list-header>
           <ion-note>www.tutehres.co.za</ion-note>
 
           <ion-menu-toggle   auto-hide="false" *ngFor="let p of appPages; let i = index"  >
             <ion-item    style="background-color:rgb(3, 14, 15);" (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
-              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
-              <ion-label>{{ p.title }}</ion-label>
+              <ion-icon   style="background-color:rgb(3, 14, 15);" slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+              <ion-label >{{ p.title }}</ion-label>
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
